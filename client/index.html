@@ -11,8 +11,8 @@
       <script>
          // Creating map options
          var mapOptions = {
-            center: [14.385044, 78.486671],
-            zoom: 10
+            center: [17.385044, 78.486671],
+            zoom: 5
          }
          
          // Creating a map object
@@ -24,10 +24,30 @@
          // Adding layer to the map
          map.addLayer(layer);
 
+         var LeafIcon = L.Icon.extend({
+            options: {
+                shadowUrl: 'assets/images/leaf-shadow.png',
+                iconSize:     [38, 95],
+                shadowSize:   [50, 64],
+                iconAnchor:   [22, 94],
+                shadowAnchor: [4, 62],
+                popupAnchor:  [-3, -76]
+            }
+        });
+
+        //  icons
+        var greenIcon = new LeafIcon({iconUrl: 'assets/images/leaf-green.png'}),
+            redIcon = new LeafIcon({iconUrl: 'assets/images/leaf-red.png'}),
+            orangeIcon = new LeafIcon({iconUrl: 'assets/images/leaf-orange.png'});
+
          //create a marker
-         var marker = L.marker([17.385044, 78.486671]);
-         marker.bindPopup('This is Tutorialspoint').openPopup();
-         marker.addTo(map);
+        var marker = L.marker([17.385044, 78.486671],{icon: greenIcon}).addTo(map).bindPopup("I am a green leaf.");
+            marker1 = L.marker([18.385044, 79.486671],{icon: redIcon}).addTo(map).bindPopup("I am a red leaf.");
+            marker2 = L.marker([13.385044, 79.486671],{icon: orangeIcon}).addTo(map).bindPopup("I am a orange leaf.");
+            marker3 = L.marker([16.385044, 78.486671]);
+        
+         marker3.bindPopup('This is Tutorialspoint3').openPopup();
+         marker3.addTo(map);
       </script>
    </body>
    
