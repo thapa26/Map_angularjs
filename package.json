@@ -7,7 +7,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.12.10",
+    "browser-sync": "^2.29.1",
     "del": "^3.0.0",
     "gulp": "~3.9.0",
     "gulp-angular-filesort": "~1.1.1",
@@ -43,7 +43,7 @@
     "jshint": "^2.8.0",
     "jshint-stylish": "^2.1.0",
     "wiredep": "^4.0.0",
-    "yargs": "^8.0.2"
+    "yargs": "^17.7.2"
   },
   "engines": {
     "node": ">=0.10.20"
